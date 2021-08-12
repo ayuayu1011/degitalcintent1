@@ -1,6 +1,7 @@
 void Boss() {
   BossBattle();
   battleSet();
+  dataSet();
   Boss_cnt=0;
   if (go_item%2==1) {//3を押すごとにitem画面を表示したり消したりする
     itemset(go_item);
@@ -32,7 +33,12 @@ void Boss() {
       enmemys[n].enemy_y=random(enmemys[n].enemy_size, enmemys[n].MAX_Y);
     }
     Boss_cnt=5;
-    hero_attack=10;
+    if(normal==1){
+      boss_attack-=5;
+    }else{
+      boss_attack-=6;
+    }
+    enemy_attack--;
     b_itemCnt=6-normal;
     hero_HP=100;
     go_item=0;
@@ -135,9 +141,5 @@ void boss_talk() {
     fill(255);
     textSize(20);
     text("return Title:1         return Map:2", 200, 450);
-  }
-  if (bt<5) {
-    textSize(20);
-    text("Next:2->", width-160, height-70);
   }
 }

@@ -8,18 +8,22 @@ void keyReleased() {
       }
     }
     if (key == 'e') {
-      if (normal==3) {
-        level=1;
-        play_f=true;
-      }
+      level=levelE;
+      Boss_cnt=Boss_cntE;
+      BossL_cnt=BossL_cntE;
+      Boss_btCnt=Boss_btCntE;
+      enemy_attack=enemy_attackE;
+      boss_attack=boss_attackE;
       normal=1;
       page=1;
     }
     if (key == 'n') {
-      if (normal==1) {
-        level=1;
-          play_f=true;
-      }
+      level=levelN;
+      Boss_cnt=Boss_cntN;
+      BossL_cnt=BossL_cntN;
+      Boss_btCnt=Boss_btCntN;
+      enemy_attack=enemy_attackN;
+      boss_attack=boss_attackN;
       normal =3;
       page =1;
     }
@@ -46,6 +50,7 @@ void keyReleased() {
       page=6;
     }
     if (key == '5') {
+      boss_attack+=5+(normal-1);
       page=6;
     }
     if (key == 'p') {
@@ -118,6 +123,8 @@ void keyReleased() {
 
   if (page==4) { //character_info
     if (key == '1') {
+      ch=0;
+      bc=0;
       page=0;
       menu=false;
     }
@@ -140,6 +147,11 @@ void keyReleased() {
     if (go_bt) {
       if (key=='1') {
         Boss_cnt=5;
+        if (normal==1) {
+          boss_attack-=5;
+        } else {
+          boss_attack-=6;
+        }
         go_bt=false;
         page=1;
       }
@@ -164,6 +176,7 @@ void keyReleased() {
   }
   if (page==9) { //celebrate
     if (key == 'r') {
+      enemy_attack+=normal;
       if (BossL_cnt!=1) {
         page=1;
       } else {

@@ -25,11 +25,11 @@ void textbox() {
   rect(80-10, (height/2)+100-10, width-150+20, height/4+20);
   fill(0);
   rect(80, (height/2)+100, width-150, height/4);
-  rect(45, 120, 100, 50);
+  rect(35, 120, 120, 50);
   fill(255);
   textSize(20);
-  text("Title:1", 65, 150);
+  text("タイトル:1", 45, 150);
   if (pr!=9 && bt<5) {
-    text("Next:2->", width-160, height-70);
+    text("つぎへ:2->", width-180, height-70);
   }
 }

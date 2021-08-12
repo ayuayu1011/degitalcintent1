@@ -20,9 +20,9 @@ void itemset(int n) {
     rect(150, 440, 300, 200);
     fill(0);
     textSize(20);
-    text("item  "+String.valueOf(b_itemCnt), 170, 470);
-    text("a : power up me", 170, 500);
-    text("b : heal", 170, 540);
-    text("c : power down enemy", 170, 580);
+    text("残りアイテム数 :"+String.valueOf(b_itemCnt) +" ｺ  とじる:3", 170, 470);
+    text("a : 自分のパワーUP", 170, 500);
+    text("b : 回復", 170, 540);
+    text("c : 敵のパワーDOWN", 170, 580);
   }
 }

@@ -34,11 +34,15 @@ boolean go_bt=false;
 int Boss_cnt, BossL_cnt, Boss_btCnt;
 boolean play_f=true;
 //ノーマルに関する変数
-int normal=1;
+int normal=0;
 //賛辞に関する変数
 int good=0;
-
-
+//イージー、ノーマルそれぞれの変数を補完
+int levelE=1,levelN=1;
+int Boss_cntE=5, BossL_cntE=5, Boss_btCntE=1;
+int Boss_cntN=5, BossL_cntN=5, Boss_btCntN=3;
+int enemy_attackE=4,enemy_attackN=4;
+int boss_attackE=2,boss_attackN=2;
 void setup() {
   size(800, 600);
   dataSet();

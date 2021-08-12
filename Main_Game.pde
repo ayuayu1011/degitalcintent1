@@ -6,6 +6,8 @@ void main_game() {
     BossL_cnt=5;
     b_itemCnt=6-normal;
     Boss_btCnt=normal;
+    enemy_attack=4;
+    boss_attack=2;
     play_f=false;
   }
   if (BossL_cnt==5 && BossL_cnt!=0) {
@@ -25,12 +27,17 @@ void main_game() {
   move_hero();
   for (int k=0; k<Enemy_cnt-1; k++)enmemys[k].e_display();
   if (encount_enemy(hero_x, hero_y)) {
-    hero_attack=9+level;
+    hero_attack=5+level;
     page=2;
   }
 
   //ボス戦
   if (Boss_cnt==0) {
+    if(normal==1){
+      boss_attack+=5;
+    }else{
+      boss_attack+=6;
+    }
     page=6;
   }
 }

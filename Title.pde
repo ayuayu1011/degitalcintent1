@@ -5,8 +5,23 @@ void title() {
   bt=0;
   int x1=120, y1=210;
   int x2=590, y2=210;
-
-
+  hero_HP=100;
+  if (normal==1) {
+    levelE=level;
+    Boss_cntE=Boss_cnt;
+    BossL_cntE=BossL_cnt;
+    Boss_btCntE=Boss_btCnt;
+    enemy_attackE=enemy_attack;
+    boss_attackE=boss_attack;
+  }
+  if (normal==3) {
+    levelN=level;
+    Boss_cntN=Boss_cnt;
+    BossL_cntN=BossL_cnt;
+    Boss_btCntN=Boss_btCnt;
+    enemy_attackN=enemy_attack;
+    boss_attackN=boss_attack;
+  }
   image(easy_mode, x1, y1);
   image(normal_mode, x2, y2);
 
@@ -25,38 +40,38 @@ void title() {
 
   fill(255);
   textSize(20);
-  text("key select", 340, 450);
+  text("文字キーで選択", 340, 450);
 
   if (menu) {
     //キャラクター紹介への移動
     fill(0);
-    rect(width-120, height/8-50, 120, 30);
+    rect(width-150, height/8-50, 170, 30);
     fill(255);
     textSize(20);
-    text("character:a", width-110, height/6-50);
+    text("キャラクター:a", width-140, height/6-50);
 
     //プロローグへの移動
     fill(0);
-    rect(width-120, 75, 120, 30);
+    rect(width-150, 75, 170, 30);
     fill(255);
     textSize(20);
-    text("prologue:b", width-110, height/4-50);
-    
+    text("プロローグ:b", width-140, height/4-50);
+
     //エピローグへの移動
     fill(0);
-    rect(width-120, 125, 120, 30);
+    rect(width-150, 125, 170, 30);
     fill(255);
     textSize(20);
-    text("epilogue:c", width-110, height/3-50);
-    
-    fill(0);
+    text("エピローグ:c", width-140, height/3-50);
+
+    fill(255);
     textSize(15);
-    text("close:1", width-80, 20);
-  }else{
+    text("とじる:1", width-100, 20);
+  } else {
     fill(0);
     rect(width-140, height/25, 120, 50);
     fill(255);
     textSize(15);
-    text("OpenMenu:1", width-130, height/10);
+    text("メニューを開く:1", width-140, height/10);
   }
 }

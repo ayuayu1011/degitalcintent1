@@ -1,9 +1,9 @@
 void character() {
   background(255);
   fill(0);
-  text("Close:1", 100, 100);
+  text("とじる:1", 100, 100);
   if (ch<5) {
-    text("Next:2", 650, 100);
+    text("つぎへ:2", 650, 100);
   }
   boolean returnTitle=false;
   if (mousePressed && dist(mouseX, mouseY, 150, 125)<50) {
@@ -51,7 +51,7 @@ void Enemy1_In() {
   enemy1_i.resize(80, 80);
   image(enemy1_i, 200, 200);//敵の表示
   enemy2_i.resize(80, 80);
-  image(enemy1n_i, 300, 200);//敵の表示
+  image(enemy2_i, 300, 200);//敵の表示
   enemy1n_i.resize(80, 80);
   image(enemy1n_i, 400, 200);//敵の表示
   enemy2n_i.resize(80, 80);
@@ -98,8 +98,8 @@ void EnemyB_In() {
     rect(50, (height/2)+50, width-100, height/3);
     fill(255);
     textSize(20);
-    text("ドラゴンナイト:ボス", 120, 400);
-    text("黒い鎧を着た騎士。剣術の達人。", 120, 440);
+    text("ダークナイト:ボス", 120, 400);
+    text("黒い鎧(よろい)を着た騎士。剣術の達人。", 120, 440);
     text("ボスドラゴンの側近の一人。正体は謎。", 120, 480);
   }
 }

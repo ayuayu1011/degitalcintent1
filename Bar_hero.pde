@@ -10,10 +10,14 @@ void bar() {
   text("MyHP :" +String.valueOf(hero_HP), 160, 25);
 
   text("Boss :"+String.valueOf(Boss_cnt), 300, 25);
-
-  text("new Stage :"+String.valueOf(Boss_btCnt), 400, 25);
-  text("STAGE "+String.valueOf(1+(5-BossL_cnt)), 550, 25);
+  
   textSize(15);
+  text("次のステージまで :"+String.valueOf(Boss_btCnt), 400, 25);
   fill(255, 255, 0);
-  text("Title:r", 700, 25);
+  text("タイトルに戻る:r", 550, 25);
+  textSize(20);
+  fill(255);
+  rect(690,5,100,30);
+  fill(255,0,0);
+  text("STAGE "+String.valueOf(1+(5-BossL_cnt)), 700, 25);
 }

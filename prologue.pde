@@ -18,7 +18,8 @@ void prologue() {
     fill(255);
     rect(width-170, height-100, 150, 50);
     fill(0);
-    text("Next:2->", width-160, height-70);
+    textSize(25);
+    text("つぎへ:2->", width-160, height-70);
   }
   if (pr==1 || pr==2) {
     image(mori1, 0, 0, width, height);

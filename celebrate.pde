@@ -5,7 +5,6 @@ void Celebrate(int n) {
     enmemys[n].enemy_x=random(enmemys[n].enemy_size, enmemys[n].MAX_X);
     enmemys[n].enemy_y=random(enmemys[n].enemy_size, enmemys[n].MAX_Y);
   }
-  hero_attack=level+9;
   b_itemCnt=6-normal;
   hero_HP=100;
   go_item=0;
